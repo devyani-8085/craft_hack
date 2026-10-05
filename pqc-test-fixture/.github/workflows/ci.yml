@@ -1,0 +1,15 @@
+# Deliberately kept free of ".get(" / ".post(" tokens so it does NOT false-trigger
+# the Go-Gin route-signature regex bug documented separately in engine.js.
+# Use this file to confirm the bug-fix: after the regex fix, a CI file like this
+# one should classify as Internal (no route, no published port) both before and after.
+name: CI
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run test suite
+        run: pytest tests/

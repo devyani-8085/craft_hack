@@ -1,0 +1,9 @@
+# Expected: container-image scan target — old OS crypto libs baked into the image layers
+FROM debian:9
+RUN apt-get update && apt-get install -y openssl=1.1.0l-1~deb9u6 libssl1.0.2 libgnutls30 gnupg1 openssh-server
+RUN pip install pycrypto==2.6.1 pyopenssl==17.0.0
+RUN npm install -g node-forge@0.7.0
+RUN openssl genrsa -out /etc/ssl/private/app.key 1024
+ENV TLS_MIN_VERSION=TLSv1
+ENV API_SECRET=container-hardcoded-api-secret
+EXPOSE 443 22

@@ -1,0 +1,5 @@
+# Expected artifact type: protocol/config (OpenSSL system policy)
+[system_default_sect]
+MinProtocol = TLSv1
+CipherString = DEFAULT:@SECLEVEL=0
+Groups = X25519MLKEM768:X25519:secp256r1

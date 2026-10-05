@@ -1,0 +1,9 @@
+{
+  "name": "cryptoscan/php-fixture",
+  "require": {
+    "phpseclib/phpseclib": "2.0.30",
+    "firebase/php-jwt": "5.0.0",
+    "paragonie/sodium_compat": "1.20.0",
+    "defuse/php-encryption": "2.3.1"
+  }
+}

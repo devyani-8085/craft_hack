@@ -1,0 +1,7 @@
+# Expected artifact type: protocol (SSH) — weak KEX/cipher/MAC/host-key algorithms
+Protocol 2
+Ciphers 3des-cbc,aes128-cbc,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com
+MACs hmac-md5,hmac-sha1,hmac-sha2-256
+KexAlgorithms diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,curve25519-sha256,sntrup761x25519-sha512@openssh.com,mlkem768x25519-sha256
+HostKeyAlgorithms ssh-dss,ssh-rsa,ecdsa-sha2-nistp256,ssh-ed25519
+PubkeyAcceptedAlgorithms ssh-rsa,ssh-ed25519
