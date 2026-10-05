@@ -1,0 +1,23 @@
+# Expected Exposure per service (scanner/pipeline.py Stage 1 + engine.js isDeployConfig):
+#   web-api  -> External (published host port "443:443")
+#   postgres -> Internal (no published host port, default DB port only)
+#   redis    -> Internal (no published host port)
+version: "3.9"
+services:
+  web-api:
+    build: .
+    ports:
+      - "443:443"          # published host port -> External
+    environment:
+      - CARD_ENCRYPTION_KEY=${CARD_ENCRYPTION_KEY}
+      - AUTH_TOKEN_SECRET=${AUTH_TOKEN_SECRET}
+
+  postgres:
+    image: postgres:16
+    environment:
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    # no "ports:" published -> Internal
+
+  redis:
+    image: redis:7
+    # no "ports:" published -> Internal
