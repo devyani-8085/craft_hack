@@ -1,0 +1,13 @@
+{
+  "name": "pqc-test-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Expected artifact type: library (SCA layer, scanner/sca_analyzer.py KNOWN_CRYPTO_LIBRARIES['npm']). Expected `version` field = the pinned string on each dependency below.",
+  "dependencies": {
+    "jsonwebtoken": "8.5.1",
+    "crypto-js": "3.1.9",
+    "elliptic": "6.4.0",
+    "node-rsa": "1.1.1",
+    "express": "4.19.2"
+  }
+}

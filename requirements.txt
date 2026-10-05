@@ -1,0 +1,12 @@
+# Expected artifact type: library (SCA layer, scanner/sca_analyzer.py KNOWN_CRYPTO_LIBRARIES["pip"])
+# Expected `version` field = the pinned version string on each line below.
+flask==3.0.3
+pyjwt==2.8.0
+cryptography==2.8          # old pinned version, cataloged for CBOM completeness
+pycryptodome==3.6.1        # old pinned version, cataloged for CBOM completeness
+pydes==2.0.1               # CRITICAL severity in catalogue: pure-Python DES/3DES
+boto3==1.34.0
+azure-keyvault-keys==4.9.0
+azure-identity==1.16.0
+google-cloud-kms==2.21.0
+PyKCS11==1.5.12
